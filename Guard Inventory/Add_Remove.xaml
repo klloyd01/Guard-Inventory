@@ -1,0 +1,144 @@
+﻿<Page x:Name="Add_Remove1" x:Class="Guard_Inventory.Add_Remove"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Guard_Inventory"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="Add_Remove" HorizontalAlignment="Left" 
+      Width="1123" Height="478.5">
+    <Grid HorizontalAlignment="Left" Height="478.5" 
+          Margin="0" Width="1123">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF04080E" Offset="0"/>
+                <GradientStop Color="#FF546E99" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlockAddRemove" Height="53" 
+                   Margin="401,-385,0,0" TextWrapping="Wrap" 
+                   Text="Add/Remove" HorizontalAlignment="Left" 
+                   Width="319" TextAlignment="Center" 
+                   FontFamily="OCR A Extended" FontWeight="Bold" 
+                   FontSize="48">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF01040D" Offset="0"/>
+                    <GradientStop Color="#FF7E92CD" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <ComboBox x:Name="itemPicker" Height="45" 
+                  Margin="240,-209,0,0" HorizontalAlignment="Left" 
+                  Width="638" FontSize="22" IsEditable="True"/>
+        <TextBlock x:Name="textBlockItem" HorizontalAlignment="Left" 
+                   Height="42.25" Margin="80,-209,0,0" 
+                   TextWrapping="Wrap" Text="Item" 
+                   Width="140" TextAlignment="Center" 
+                   FontFamily="OCR A Extended" FontSize="36"/>
+        <Button x:Name="refresh" Content="" 
+                HorizontalAlignment="Left" Height="50" 
+                Margin="908,-205,0,0" Width="50" 
+                BorderThickness="3" Click="refresh_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="refresh.png"/>
+            </Button.Background>
+        </Button>
+        <Rectangle x:Name="refreshAlert" HorizontalAlignment="Left" 
+                   Height="42.25" Margin="985,-206,0,0" 
+                   Stroke="Black" Width="45">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="yellow-exclamation-mark-in-triangle-hi.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="textBlockCurrentQt" HorizontalAlignment="Left" 
+                   Margin="65,69,0,0" TextWrapping="Wrap" 
+                   Text="Current Qt" Width="134" 
+                   TextAlignment="Center" FontFamily="OCR A Extended" 
+                   FontSize="22" FontWeight="Bold" 
+                   Height="21.75"/>
+        <TextBlock x:Name="textBlockAddRemov" HorizontalAlignment="Left" 
+                   Margin="65,181.25,0,275.375" TextWrapping="Wrap" 
+                   Text="Add/Remove" Width="133" FontFamily="OCR A Extended" 
+                   FontWeight="Bold" TextAlignment="Center" 
+                   FontSize="22" Height="21.875"/>
+        <TextBlock x:Name="textBlockPurchasePrice" HorizontalAlignment="Left" 
+                   Height="25" Margin="239,-91,0,0" 
+                   TextWrapping="Wrap" Text="Purchase Price" 
+                   Width="194" FontFamily="OCR A Extended" 
+                   FontWeight="Bold" FontSize="22"/>
+        <TextBlock x:Name="textBlockContainer" HorizontalAlignment="Left" 
+                   Height="23.75" Margin="477,-92,0,0" 
+                   TextWrapping="Wrap" Text="Container" 
+                   Width="122" FontFamily="OCR A Extended" 
+                   FontWeight="Bold" FontSize="22"/>
+        <TextBlock x:Name="textBlockCondition" Height="23.75" 
+                   Margin="633,-92,0,0" TextWrapping="Wrap" 
+                   Text="Condition" HorizontalAlignment="Left" 
+                   Width="123" TextAlignment="Center" 
+                   FontFamily="OCR A Extended" FontWeight="Bold" 
+                   FontSize="22"/>
+        <Button x:Name="updateButton" Content="Update" 
+                HorizontalAlignment="Left" Height="50" 
+                Margin="805,-25,0,0" Width="154" 
+                BorderThickness="3" FontFamily="OCR A Extended" 
+                FontSize="24" FontWeight="Bold"
+                Click="updateButton_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF090F27" Offset="0"/>
+                    <GradientStop Color="#FF8091D3" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF191B53" Offset="0"/>
+                    <GradientStop Color="#FF9A9CBE" Offset="0.494"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBoxCondition" HorizontalAlignment="Left" 
+                 Margin="636,-23,0,0" TextWrapping="Wrap" 
+                 Text="---" Width="121" 
+                 BorderThickness="2" Height="32" 
+                 FontFamily="OCR A Extended" FontSize="20" 
+                 TextAlignment="Center"/>
+        <TextBox x:Name="textBoxContainer" Margin="475,-23,0,0" 
+                 TextWrapping="Wrap" Text="---" 
+                 Height="32" BorderThickness="2" 
+                 Width="122" FontSize="16" 
+                 FontFamily="OCR A Extended" FontWeight="Bold" 
+                 HorizontalAlignment="Left" TextAlignment="Center"/>
+        <TextBox x:Name="textBoxPurchasePrice" HorizontalAlignment="Left" 
+                 Margin="241,-23,0,0" TextWrapping="Wrap" 
+                 Text="---" Width="181" 
+                 Height="32" TextAlignment="Center" 
+                 FontFamily="OCR A Extended" FontWeight="Bold" 
+                 FontSize="20" BorderThickness="2"/>
+        <TextBox x:Name="textBoxAddRemove" HorizontalAlignment="Left" 
+                 Margin="65,-23,0,0" TextWrapping="Wrap" 
+                 Text="---" Width="130" 
+                 TextAlignment="Center" FontFamily="OCR A Extended" 
+                 FontWeight="Bold" FontSize="20" 
+                 Height="32" BorderThickness="2"/>
+        <TextBox x:Name="textBoxCurrentQt" HorizontalAlignment="Left" 
+                 Height="32" Margin="64,141,0,0" 
+                 TextWrapping="Wrap" Text="---" 
+                 Width="138" BorderThickness="2" 
+                 FontFamily="OCR A Extended" FontSize="20" 
+                 TextAlignment="Center"/>
+        <TextBlock x:Name="textBlockDate" HorizontalAlignment="Left" 
+                   Height="21.75" Margin="239,38,0,0" 
+                   TextWrapping="Wrap" Text="Date 00/00/0000" 
+                   Width="200" FontFamily="OCR A Extended" 
+                   FontWeight="Bold" FontSize="22"/>
+        <CheckBox x:Name="newItemCheckBox" Content="New Item" 
+                  HorizontalAlignment="Left" Height="18.25" 
+                  Margin="973,-20,0,0" Width="103" 
+                  BorderThickness="2" FontFamily="OCR A Extended" 
+                  FontSize="16" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlockUserID" HorizontalAlignment="Left" Height="25.375" Margin="805,0,0,190.25" TextWrapping="Wrap" Text="User ID" Width="154" VerticalAlignment="Bottom" d:LayoutOverrides="Height" FontFamily="OCR A Extended" FontSize="20" TextAlignment="Center"/>
+        <TextBox x:Name="textBoxUserID" HorizontalAlignment="Left" Height="32" Margin="815,288.25,166,158.25" TextWrapping="Wrap" Text="---" Width="138" BorderThickness="2" FontFamily="OCR A Extended" FontSize="20" TextAlignment="Center"/>
+    </Grid>
+</Page>

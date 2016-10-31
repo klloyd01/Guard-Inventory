@@ -1,0 +1,279 @@
+﻿<Page x:Name="View_Inventory1" x:Class="Guard_Inventory.View_Inventory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Guard_Inventory"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="View_Inventory" Width="1123" Height="478.5">
+    <Grid Margin="0" HorizontalAlignment="Left" 
+          Height="478.5" Width="1123">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF0C0F37" Offset="0"/>
+                <GradientStop Color="#FFA1A8FA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlockViewInv" Height="50" 
+                   Margin="400,-382,0,0" TextWrapping="Wrap" 
+                   Text="View Inventory" Background="#FF02051F" 
+                   Foreground="#FFBFBDBD" Width="320" 
+                   HorizontalAlignment="Left" FontFamily="OCR A Extended" 
+                   TextAlignment="Center" FontWeight="Bold" 
+                   FontSize="36"/>
+        <TextBlock x:Name="textBlockContainer" HorizontalAlignment="Left" 
+            Height="23.75" Margin="457.575,93.574,0,361.175" 
+            TextWrapping="Wrap" Text="Container" 
+            Width="122" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="22" d:LayoutOverrides="TopMargin, BottomMargin"/>
+        <Rectangle Fill="Black" Height="4" 
+                   Margin="55,-235,23,0" Stroke="Black" 
+                   StrokeThickness="32" OpacityMask="Black" 
+                   HorizontalAlignment="Left" Width="985"/>
+        <TextBlock x:Name="textBlockItemID" HorizontalAlignment="Left" 
+            Height="23.75" Margin="53.375,94,0,360.75" 
+            TextWrapping="Wrap" Text="Item ID" 
+            Width="95" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="22" d:LayoutOverrides="HorizontalAlignment"/>
+        <TextBlock x:Name="textBlockItem" HorizontalAlignment="Left" 
+            Height="23.75" Margin="249.1,94,0,360.75" 
+            TextWrapping="Wrap" Text="Item" 
+            Width="98" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="22" d:LayoutOverrides="HorizontalAlignment" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlockQuantity" HorizontalAlignment="Left" 
+            Height="23.75" Margin="641.95,94,0,360.75" 
+            TextWrapping="Wrap" Text="Quantity" 
+            Width="122" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="22" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlockItemID1" HorizontalAlignment="Left" 
+                   Height="20" Margin="55,133.25,0,325.25" 
+                   TextWrapping="Wrap" Text="textBlockItemID1" 
+                   Width="91" Background="Black" 
+                   FontSize="20" FontFamily="OCR A Extended" 
+                   Foreground="#FF906868" Opacity="0.87"/>
+        <TextBlock x:Name="textBlockContainer1" Height="20" 
+                   Margin="440.4,133.25,523.6,325.25" TextWrapping="Wrap" 
+                   Text="textBlockContainer1" Background="Black" 
+                   FontSize="20" FontFamily="OCR A Extended" 
+                   Foreground="#FF906868" Opacity="0.87" Width="159"/>
+        <TextBlock x:Name="textBlockQuantity1" Height="20" 
+                   Margin="642.925,133.25,0,325.25" TextWrapping="Wrap" 
+                   Text="textBlockQuantity1" Background="Black" 
+                   FontSize="20" FontFamily="OCR A Extended" 
+                   Foreground="#FF906868" Opacity="0.87" 
+                   HorizontalAlignment="Left" Width="117"/>
+        <TextBlock x:Name="textBlockCondition" HorizontalAlignment="Left" 
+            Height="23.75" Margin="820.625,94,0,360.75" 
+            TextWrapping="Wrap" Text="Condition" 
+            Width="122" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="22" TextAlignment="Center"/>
+        <TextBlock x:Name="textBlockCondition1" Height="20" 
+                   Margin="795.575,133.25,0,325.25" TextWrapping="Wrap" 
+                   Text="textBlockCondition1" Background="Black" 
+                   FontSize="20" FontFamily="OCR A Extended" 
+                   Foreground="#FF906868" Opacity="0.87" 
+                   HorizontalAlignment="Left" Width="165"/>
+        <Button x:Name="add1" Content="+" 
+                HorizontalAlignment="Left" Height="25" 
+                Margin="15,-190,0,0" Width="25" 
+                BorderThickness="3" FontFamily="OCR A Extended" 
+                FontWeight="Bold" FontSize="20"
+                Click="add1_Click"/>
+        <ListBox x:Name="listBoxItem1" Margin="172,130,0,318.5" 
+                 Background="White" FontFamily="OCR A Extended" 
+                 FontSize="18" HorizontalAlignment="Left" 
+                 Width="247" Height="30" IsSynchronizedWithCurrentItem="True"/>
+        <TextBlock x:Name="textBlockCalculatedItem1" Margin="172,130,0,318.5" 
+                 Background="White" FontFamily="OCR A Extended" 
+                 FontSize="18" HorizontalAlignment="Left" 
+                 Width="247" Height="30" Text="calculatedItem1" Visibility="Hidden"/>
+        <Button x:Name="add2" Content="+" 
+            HorizontalAlignment="Left" Height="25" 
+            Margin="15,-86,0,0" Width="25" 
+            BorderThickness="3" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="20"
+            Click="add2_Click"/>
+        <TextBlock x:Name="textBlockItemID2" HorizontalAlignment="Left" 
+            Height="20" Margin="55,185.75,0,272.75" 
+            TextWrapping="Wrap" Text="textBlockItemID2" 
+            Width="91" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <ListBox x:Name="listBoxItem2" Margin="172,182.5,0,266" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30" IsSynchronizedWithCurrentItem="True"/>
+        <TextBlock x:Name="textBlockCalculatedItem2" Margin="172,182.5,0,266" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30"
+                   Text="calculatedItem2" Visibility="Hidden"/>
+        <TextBlock x:Name="textBlockContainer2" Height="20" 
+            Margin="440.4,185.75,523.6,272.75" TextWrapping="Wrap" 
+            Text="textBlockContainer2" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <TextBlock x:Name="textBlockQuantity2" Height="20" 
+            Margin="642.925,185.75,0,272.75" TextWrapping="Wrap" 
+            Text="textBlockQuantity2" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="117"/>
+        <TextBlock x:Name="textBlockCondition2" Height="20" 
+            Margin="795.575,185.75,0,272.75" TextWrapping="Wrap" 
+            Text="textBlockCondition2" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="165"/>
+        <Button x:Name="add3" Content="+" 
+            HorizontalAlignment="Left" Height="25" 
+            Margin="15,18,0,0" Width="25" 
+            BorderThickness="3" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="20"
+            Click="add3_Click" d:LayoutOverrides="VerticalAlignment"/>
+        <TextBlock x:Name="textBlockItemID3" HorizontalAlignment="Left" 
+            Height="20" Margin="55,239.75,0,218.75" 
+            TextWrapping="Wrap" Text="textBlockItemID3" 
+            Width="91" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <ListBox x:Name="listBoxItem3" Margin="172,235,0,213.5" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30" d:LayoutOverrides="VerticalAlignment" IsSynchronizedWithCurrentItem="True"/>
+        <TextBlock x:Name="textBlockCalculatedItem3" Margin="172,235,0,213.5" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30" Text="calcualtedItem3" Visibility="Hidden"/>
+        <TextBlock x:Name="textBlockContainer3" Height="20" 
+            Margin="440.4,239.75,523.6,218.75" TextWrapping="Wrap" 
+            Text="textBlockContainer3" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <TextBlock x:Name="textBlockQuantity3" Height="20" 
+            Margin="642.925,239.75,0,218.75" TextWrapping="Wrap" 
+            Text="textBlockQuantity3" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="117"/>
+        <TextBlock x:Name="textBlockCondition3" Height="20" 
+            Margin="795.575,239.75,0,218.75" TextWrapping="Wrap" 
+            Text="textBlockCondition3" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="165"/>
+        <Button x:Name="add4" Content="+" 
+            HorizontalAlignment="Left" Height="25" 
+            Margin="15,122,0,0" Width="25" 
+            BorderThickness="3" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="20"
+            Click="add4_Click"/>
+        <TextBlock x:Name="textBlockItemID4" HorizontalAlignment="Left" 
+            Height="20" Margin="55,290.25,0,168.25" 
+            TextWrapping="Wrap" Text="textBlockItemID4" 
+            Width="91" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <ListBox x:Name="listBoxItem4" Margin="172,285,0,163.5" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30" IsSynchronizedWithCurrentItem="True"/>
+        <TextBlock x:Name="textBlockCalculatedItem4" Margin="172,285,0,163.5" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30" Text="calculatedItem4"
+                   Visibility="Hidden"/>
+        <TextBlock x:Name="textBlockContainer4" Height="20" 
+            Margin="440.4,290.75,523.6,167.75" TextWrapping="Wrap" 
+            Text="textBlockContainer4" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <TextBlock x:Name="textBlockQuantity4" Height="20" 
+            Margin="642.925,290.75,0,167.75" TextWrapping="Wrap" 
+            Text="textBlockQuantity4" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="117"/>
+        <TextBlock x:Name="textBlockCondition4" Height="20" 
+            Margin="795.575,290.75,0,167.75" TextWrapping="Wrap" 
+            Text="textBlockCondition4" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="165"/>
+        <Button x:Name="add5" Content="+" 
+            HorizontalAlignment="Left" Height="25" 
+            Margin="15,228,0,0" Width="25" 
+            BorderThickness="3" FontFamily="OCR A Extended" 
+            FontWeight="Bold" FontSize="20"
+            Click="add5_Click"/>
+        <TextBlock x:Name="textBlockItemID5" HorizontalAlignment="Left" 
+            Height="20" Margin="55,343.25,0,115.25" 
+            TextWrapping="Wrap" Text="textBlockItemID5" 
+            Width="91" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <ListBox x:Name="listBoxItem5" Margin="172,339,0,109.5" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30" IsSynchronizedWithCurrentItem="True"/>
+        <TextBlock x:Name="textBlockCalculatedItem5" Margin="172,339,0,109.5" 
+            Background="White" FontFamily="OCR A Extended" 
+            FontSize="18" HorizontalAlignment="Left" 
+            Width="247" Height="30"
+                   Text="calculatedItem5" Visibility="Hidden"/>
+        <TextBlock x:Name="textBlockContainer5" Height="20" 
+            Margin="440.4,342.75,523.6,115.75" TextWrapping="Wrap" 
+            Text="textBlockContainer5" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87"/>
+        <TextBlock x:Name="textBlockQuantity5" Height="20" 
+            Margin="642.925,342.75,0,115.75" TextWrapping="Wrap" 
+            Text="textBlockQuantity2" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="117"/>
+        <TextBlock x:Name="textBlockCondition5" Height="20" 
+            Margin="795.575,342.75,0,115.75" TextWrapping="Wrap" 
+            Text="textBlockCondition2" Background="Black" 
+            FontSize="20" FontFamily="OCR A Extended" 
+            Foreground="#FF906868" Opacity="0.87" 
+            HorizontalAlignment="Left" Width="165"/>
+        <Button x:Name="x1" Content="X" 
+                HorizontalAlignment="Left" Height="10" 
+                Margin="2,140.75,0,327.75" Width="10" 
+                FontFamily="OCR A Extended" FontSize="7" 
+                Background="#FFDDDDDD" BorderThickness="0" 
+                BorderBrush="#FF353C82" Click="x1_Click"/>
+        <Button x:Name="x2" Content="X" 
+                HorizontalAlignment="Left" Height="10" 
+                Margin="2,191.25,0,277.25" Width="10" 
+                FontFamily="OCR A Extended" FontSize="7" 
+                Background="#FFDDDDDD" BorderThickness="0" 
+                BorderBrush="#FF353C82" Click="x2_Click"/>
+        <Button x:Name="x3" Content="X" 
+                HorizontalAlignment="Left" Height="10" 
+                Margin="2,243.75,0,224.75" Width="10" 
+                FontFamily="OCR A Extended" FontSize="7" 
+                Background="#FFDDDDDD" BorderThickness="0" 
+                BorderBrush="#FF353C82" Click="x3_Click"/>
+        <Button x:Name="x4" Content="X" 
+                HorizontalAlignment="Left" Height="10" 
+                Margin="2,295.75,0,172.75" Width="10" 
+                FontFamily="OCR A Extended" FontSize="7" 
+                Background="#FFDDDDDD" BorderThickness="0" 
+                BorderBrush="#FF353C82" Click="x4_Click"/>
+        <Button x:Name="x5" Content="X" 
+                HorizontalAlignment="Left" Height="10" 
+                Margin="2,349.521,0,118.978" Width="10" 
+                FontFamily="OCR A Extended" FontSize="7" 
+                Background="#FFDDDDDD" BorderThickness="0" 
+                BorderBrush="#FF353C82" Click="x5_Click"/>
+        <Button x:Name="runningLow" Content="Running Low" 
+                HorizontalAlignment="Left" Height="30" 
+                Margin="70,400,0,48.5" Width="175" 
+                BorderThickness="3" FontFamily="OCR A Extended" 
+                FontSize="20" FontWeight="Bold" Click="runningLow_Click"
+                Visibility="Visible"/>
+    </Grid>
+</Page>

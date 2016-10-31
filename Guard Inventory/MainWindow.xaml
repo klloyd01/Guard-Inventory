@@ -1,0 +1,58 @@
+﻿<Window x:Name="Guard_Inventory" x:Class="Guard_Inventory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Guard_Inventory"
+        mc:Ignorable="d"
+        Title="Guard Inventory" Height="586" Width="1123" HorizontalAlignment="Left" FontSize="18">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2B2525" Offset="0"/>
+                <GradientStop Color="#FF0B0887" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Frame x:Name="mainFrame" Content="Frame" 
+               Margin="0,80,0,0" HorizontalAlignment="Left" 
+               Height="478.5" Width="1116" 
+               BorderThickness="2" Foreground="Black">
+            <Frame.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3B429D" Offset="0"/>
+                    <GradientStop Color="#FF691616" Offset="1"/>
+                </LinearGradientBrush>
+            </Frame.BorderBrush>
+            <Frame.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF040440" Offset="0"/>
+                    <GradientStop Color="#FF4848F3" Offset="1"/>
+                </LinearGradientBrush>
+            </Frame.Background>
+        </Frame>
+        <Button x:Name="viewInvButton" Content="View Inventory" 
+                HorizontalAlignment="Left" Height="35" 
+                Margin="20,-441,0,0" Width="280" 
+                BorderThickness="3" FontWeight="Bold" 
+                FontSize="24" FontFamily="OCR A Extended"
+                Click="viewInvButton_Click"/>
+        <Button x:Name="addRemoveButton" Content="Add/Remove" 
+                Height="35" Margin="340,42.371,0,481.129" 
+                HorizontalAlignment="Left" Width="280" 
+                BorderThickness="3" FontSize="24" 
+                FontFamily="OCR A Extended"
+                Click="addRemoveButton_Click"/>
+        <Button x:Name="transLogButton" Content="Transaction Log" 
+            Height="35" Margin="660.958,-441,0,0" 
+            HorizontalAlignment="Left" Width="280" 
+            BorderThickness="3" FontSize="24" 
+            FontFamily="OCR A Extended"
+            Click="transLogButton_Click"/>
+        <Rectangle x:Name="mainLogo" Margin="80,160,78,108.5" Stroke="Black" HorizontalAlignment="Left" Width="959" StrokeThickness="0">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="guardInventoryMainPageLogo.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Grid>
+</Window>
